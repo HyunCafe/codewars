@@ -26,3 +26,11 @@ function queueTime(customers, n) {
   return Math.max(...tills)
 }
 ```
+
+#### 7 Kyu Kata | 05.11.23
+[link](https://www.codewars.com/kata/563089b9b7be03472d00002b/javascript)
+```javascript
+Array.prototype.remove_ = function(integer_list, values_list){
+  return integer_list.filter(elements => !values_list.includes(elements));
+}
+```
