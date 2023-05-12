@@ -34,3 +34,24 @@ Array.prototype.remove_ = function(integer_list, values_list){
   return integer_list.filter(elements => !values_list.includes(elements));
 }
 ```
+
+#### 7 Kyu Kata | 05.12.23
+[link](https://www.codewars.com/kata/56e3cd1d93c3d940e50006a4/javascript)
+```javascript
+function makeValley(arr) {
+  arr.sort((a, b) => b - a);
+
+  const leftWing = [];
+  const rightWing = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (i % 2 === 0) {
+      leftWing.push(arr[i]);
+    } else {
+      rightWing.unshift(arr[i]);
+    }
+  }
+
+  return leftWing.concat(rightWing);
+}
+```
