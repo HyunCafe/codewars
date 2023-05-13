@@ -55,3 +55,17 @@ function makeValley(arr) {
   return leftWing.concat(rightWing);
 }
 ```
+
+#### 6 Kyu Kata | 05.13.23
+[link](https://www.codewars.com/kata/5825792ada030e9601000782/train/javascript)
+```javascript
+function zipWith(fn,a0,a1) {
+ let results = [];
+ let minLength = a0.length < a1.length ? a0.length : a1.length;
+  for (let i = 0; i < minLength; i++) {
+    const combinedValues = fn(a0[i], a1[i]);
+    results.push(combinedValues)
+  }
+  return results;
+}
+```
