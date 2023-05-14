@@ -69,3 +69,11 @@ function zipWith(fn,a0,a1) {
   return results;
 }
 ```
+
+#### 6 Kyu Kata | 05.14.23
+[link](https://www.codewars.com/kata/550554fd08b86f84fe000a58/train/javascript)
+```javascript
+function inArray(array1,array2){
+  return array1.filter((words) => array2.some((words2) => words2.includes(words))).sort();
+}
+```
