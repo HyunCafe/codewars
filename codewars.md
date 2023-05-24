@@ -91,3 +91,14 @@ function solution(number){
   return sum;
 }
 ```
+
+#### 6 Kyu Kata |  05.24.23
+[link](https://www.codewars.com/kata/525f50e3b73515a6db000b83/train/javascript)
+```javascript
+function createPhoneNumber(numbers){
+  const areaCode = numbers.slice(0, 3).join('');
+  const firstHalfNum = numbers.slice(3, 6).join('');
+  const lastHalfNum = numbers.slice(6).join('');
+  return `(${areaCode}) ${firstHalfNum}-${lastHalfNum}`
+}
+```
