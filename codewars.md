@@ -102,3 +102,15 @@ function createPhoneNumber(numbers){
   return `(${areaCode}) ${firstHalfNum}-${lastHalfNum}`
 }
 ```
+
+#### 7 Kyu Kata | 05.28.23
+[link](https://www.codewars.com/kata/57ecf6efc7fe13eb070000e1/train/javascript)
+```javascript
+function outed(meet, boss) {
+  let bossVal = meet[boss] * 2;
+  let totalHappiness = Object.values(meet).reduce((a, b) => a + b) + bossVal - meet[boss];
+  let averageHappiness = totalHappiness / (Object.keys(meet).length);
+
+  return averageHappiness > 5 ? 'Nice Work Champ!' : 'Get Out Now!';
+}
+```
