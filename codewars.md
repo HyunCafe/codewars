@@ -114,3 +114,21 @@ function outed(meet, boss) {
   return averageHappiness > 5 ? 'Nice Work Champ!' : 'Get Out Now!';
 }
 ```
+
+#### 7 Kyu Kata | 05.29.23
+[link](https://www.codewars.com/kata/5784c89be5553370e000061b/train/javascript)
+```javascript
+function maxProduct(a) {
+  let largestNum = a[0];
+  let secondLargestNum = -Infinity;
+  for (let i = 1; i < a.length; i++) {
+    if (a[i] > largestNum) {
+      secondLargestNum = largestNum;
+      largestNum = a[i];
+    } else if (a[i] > secondLargestNum) {
+      secondLargestNum = a[i];
+    }
+  }
+  return largestNum * secondLargestNum;
+}
+```
