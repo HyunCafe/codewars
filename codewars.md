@@ -140,3 +140,19 @@ function spacey(array){
   return array.map((_, i) => array.slice(0, i + 1).join(''));
 }
  ```
+
+#### 7 Kyu Kata | 06.01.23
+[link](https://www.codewars.com/kata/62a611067274990047f431a8/train/javascript)
+```javascript
+function alternate(n, firstValue, secondValue){
+  const altArray = [];
+  for (let i = 0; i < n; i++) {
+    if(i % 2 == 0) {
+      altArray.push(firstValue);
+    } else {
+      altArray.push(secondValue);
+    }
+  }
+  return altArray;
+}
+```
