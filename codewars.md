@@ -156,3 +156,11 @@ function alternate(n, firstValue, secondValue){
   return altArray;
 }
 ```
+
+#### 7 Kyu Kata | 06.03.23
+[link](https://www.codewars.com/kata/56576f82ab83ee8268000059/train/javascript)
+```javascript
+function spacey(array){
+  return array.map((_, i) => array.slice(0, i + 1).join(''));
+}
+```
