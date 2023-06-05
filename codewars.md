@@ -164,3 +164,12 @@ function spacey(array){
   return array.map((_, i) => array.slice(0, i + 1).join(''));
 }
 ```
+
+#### 7 Kyu Kata | 06.05.23
+[link](https://www.codewars.com/kata/54f9c37106098647f400080a/train/javascript)
+``javascript
+function dropWhile(arr, pred) {
+  const dropIndex = arr.findIndex(num => !pred(num));
+  return dropIndex >= 0 ? arr.slice(dropIndex) : [];
+}
+```
