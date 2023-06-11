@@ -160,7 +160,7 @@ function spacey(array){
 
 #### 7 Kyu Kata | 06.05.23
 [link](https://www.codewars.com/kata/54f9c37106098647f400080a/train/javascript)
-``javascript
+```javascript
 function dropWhile(arr, pred) {
   const dropIndex = arr.findIndex(num => !pred(num));
   return dropIndex >= 0 ? arr.slice(dropIndex) : [];
@@ -178,4 +178,27 @@ function solve(arr) {
         return accumulator;
     }, []);
 }
+```
+
+#### 7 Kyu Kata | 06.11.23
+[link](https://www.codewars.com/kata/529f2d1c403a58f660000656/javascript)
+```javascript
+const Calculator = {
+  add: (a, b) => {
+    return a + b;
+  },
+  subtract: (a, b) => {
+    return a - b;
+  },
+  multiply: (a, b) => {
+    return a * b;
+  },
+  divide: (a, b) => {
+    if (b !== 0) {
+      return a / b;
+    } else {
+      return false;
+    }
+  }
+};
 ```
