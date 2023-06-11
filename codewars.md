@@ -104,7 +104,6 @@ function outed(meet, boss) {
   let bossVal = meet[boss] * 2;
   let totalHappiness = Object.values(meet).reduce((a, b) => a + b) + bossVal - meet[boss];
   let averageHappiness = totalHappiness / (Object.keys(meet).length);
-
   return averageHappiness > 5 ? 'Nice Work Champ!' : 'Get Out Now!';
 }
 ```
