@@ -166,7 +166,6 @@ function dropWhile(arr, pred) {
   return dropIndex >= 0 ? arr.slice(dropIndex) : [];
 }
 ```
-
 #### 7 Kyu Kata | 06.06.23
 [link](https://www.codewars.com/kata/5ba38ba180824a86850000f7/train/javascript)
 ```javascript
@@ -179,7 +178,6 @@ function solve(arr) {
     }, []);
 }
 ```
-
 #### 7 Kyu Kata | 06.11.23
 [link](https://www.codewars.com/kata/529f2d1c403a58f660000656/javascript)
 ```javascript
