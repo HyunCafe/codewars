@@ -200,3 +200,22 @@ const Calculator = {
   }
 };
 ```
+
+#### 7 Kyu Kata | 06.16.23
+[link](https://www.codewars.com/kata/54ff3102c1bad923760001f3/train/javascript)
+```javascript
+function getCount(str) {
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let count = 0;
+  let spreadWord = str.split('');
+
+  for (let i = 0; i < spreadWord.length; i++) {
+    if (vowels.includes(spreadWord[i])) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+```
