@@ -219,3 +219,17 @@ function getCount(str) {
 }
 
 ```
+#### 7 Kyu Kata | 06.17.23
+[link](https://www.codewars.com/kata/56747fd5cb988479af000028/train/javascript)
+```javascript
+function getMiddle(s) {
+  if (s.length % 2 === 0) {
+    let midIndex = s.length / 2;
+    return s.slice(midIndex - 1, midIndex + 1);
+  } else {
+    let midIndex = Math.floor(s.length / 2);
+    return s[midIndex];
+  }
+}
+```
+
