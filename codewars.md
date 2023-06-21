@@ -233,3 +233,14 @@ function getMiddle(s) {
 }
 ```
 
+#### 7 Kyu Kata | 06.21.23
+[link](https://www.codewars.com/kata/55908aad6620c066bc00002a)
+```javascript
+function XO(str) {
+    const strLowerCase = str.toLowerCase();
+    const validX = (strLowerCase.match(/x/g) || []).length;
+    const validO = (strLowerCase.match(/o/g) || []).length;
+  
+    return validX === validO;
+```
+
