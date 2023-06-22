@@ -244,3 +244,17 @@ function XO(str) {
     return validX === validO;
 ```
 
+#### 7 Kyu Kata | 06.22.23
+[link](https://www.codewars.com/kata/57f609022f4d534f05000024)
+```javascript
+function stray(numbers) {
+  let orderedNumbers = numbers.sort((a, b) => a - b);
+
+  if (orderedNumbers[0] !== orderedNumbers[1]) {
+    return orderedNumbers[0];
+  } else {
+    return orderedNumbers[orderedNumbers.length - 1];
+  }
+}
+```
+
