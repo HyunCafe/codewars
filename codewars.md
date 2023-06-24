@@ -217,8 +217,8 @@ function getCount(str) {
 
   return count;
 }
-
 ```
+
 #### 7 Kyu Kata | 06.17.23
 [link](https://www.codewars.com/kata/56747fd5cb988479af000028/train/javascript)
 ```javascript
