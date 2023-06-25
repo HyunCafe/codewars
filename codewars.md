@@ -178,6 +178,7 @@ function solve(arr) {
     }, []);
 }
 ```
+
 #### 7 Kyu Kata | 06.11.23
 [link](https://www.codewars.com/kata/529f2d1c403a58f660000656/javascript)
 ```javascript
@@ -257,4 +258,3 @@ function stray(numbers) {
   }
 }
 ```
-
