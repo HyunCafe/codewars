@@ -258,3 +258,21 @@ function stray(numbers) {
   }
 }
 ```
+
+#### 7 Kyu Kata | 10.11.23
+[link}(https://www.codewars.com/kata/52b5247074ea613a09000164/train/javascript)
+```javascript
+function cookingTime(eggs) {
+  // if total eggs is less than or equal to 8 return eggs * 5
+  // if total eggs is greater than 8 then store it to variable capacity
+  // capacity will check if eggs is divisble by 8 and if its fraction round up to the nearest
+  // whole number
+ if (eggs > 0 && eggs <= 8) {
+    return 5;
+  } else {
+    // If there are more than 8 eggs, calculate the capacity
+    let capacity = Math.ceil(eggs / 8);
+    return capacity * 5;
+  }
+}
+```
