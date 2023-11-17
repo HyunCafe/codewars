@@ -276,3 +276,29 @@ function cookingTime(eggs) {
   }
 }
 ```
+
+#### 6 Kyu Kata | 11.17.23
+[link](https://www.codewars.com/kata/5277c8a221e209d3f6000b56/train/javascript)
+```javascript
+function validBraces(braces) {
+  const stack = [];
+  const openers = {
+    '(': ')',
+    '[': ']',
+    '{': '}',
+  };
+
+  for (const character of braces) {
+    if (openers.hasOwnProperty(character)) {
+      // Push the opening brace onto the stack
+      stack.push(openers[character]);
+    } else if (!stack.length || stack.pop() !== character) {
+      // If the stack is empty or the top element doesn't match, the braces are invalid
+      return false;
+    }
+  }
+
+  // If the stack is empty after processing all braces, the braces are valid
+  return stack.length === 0;
+}  
+```
