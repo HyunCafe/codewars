@@ -328,3 +328,22 @@ function solution(string) {
   
 }
 ```
+
+#### 6 Kyu Kata | 11.18.23
+[link](https://www.codewars.com/kata/550498447451fbbd7600041c/train/javascript)
+```javascript
+function comp(array1, array2) {
+  if (!array1 || !array2 || array1.length !== array2.length) {
+    return false;
+  }
+
+  const hashCheck = {};
+  const arr1Squared = array1.map((number) => number * number);
+
+  for (const num of arr1Squared) {
+    hashCheck[num] = (hashCheck[num] || 0) + 1;
+  }
+
+  return array2.every((num) => hashCheck[num] && hashCheck[num]--);
+}
+```
