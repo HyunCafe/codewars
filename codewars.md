@@ -302,3 +302,29 @@ function validBraces(braces) {
   return stack.length === 0;
 }  
 ```
+
+#### 6 Kyu Kata | 11.18.23
+[link](https://www.codewars.com/kata/5208f99aee097e6552000148/train/javascript)
+```javascript
+// complete the function
+function solution(string) {
+    // input is a string in camelCasing
+  // output should be the same string with a space between each camelcase
+  // if empty string return empty string
+  
+  if(string === '') {
+    return '';
+  }
+  
+  let spacedCamelCase = string.split('').map((letter) => {
+    if (letter === letter.toUpperCase()) {
+      return ` ${letter.toUpperCase()}`
+    } else {
+      return letter;
+    }
+  }).join('')
+  
+  return spacedCamelCase;
+  
+}
+```
