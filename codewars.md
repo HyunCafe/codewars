@@ -347,3 +347,28 @@ function comp(array1, array2) {
   return array2.every((num) => hashCheck[num] && hashCheck[num]--);
 }
 ```
+
+#### 6 Kyu Kata | 11.20.23
+[link](https://www.codewars.com/kata/52efefcbcdf57161d4000091/train/javascript)
+```javascript
+function count(string) {
+  // input are strings
+  // output should be how many times a char appears in object format
+  // empty string returns empty object
+  
+  // so initial thinking is that i can seperate out the string into an array
+  // then im thinking to sort the array 
+  // declare a blank object, then  use map to push each element into the blank object
+  // and keep track of each same element by incremting a counter by 1 and pushing it as
+  // a number as the value for the corresending element as a property for the blank object
+  const trackValues = {};
+  
+  let spreadString = [...string].sort();
+  
+  spreadString.map((prop) => {
+    trackValues[prop] = (trackValues[prop] || 0) + 1;
+  })
+  
+  return trackValues;
+}
+```
