@@ -372,3 +372,18 @@ function count(string) {
   return trackValues;
 }
 ```
+#### 6 Kyu Kata | 11.20.23
+[link](https://www.codewars.com/kata/587731fda577b3d1b0001196/train/javascript)
+```javascript
+String.prototype.camelCase = function () {
+  const strArr = this.split(' ');
+
+  return strArr.map((word) => {
+    if (!word) { 
+      return '';
+    } else {
+      return word[0].toUpperCase() + word.slice(1);
+    }
+  }).join('');
+};
+```
