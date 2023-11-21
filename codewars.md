@@ -398,3 +398,32 @@ String.prototype.camelCase=function(){
   }).join('')
 }
 ```
+
+#### 6 Kyu Kata | 11.21.23
+[link](https://www.codewars.com/kata/52b757663a95b11b3d00062d/train/javascript)
+```javascript
+function toWeirdCase(string){
+  // input: will be a string
+  // output: should be a string but all even index capitalized && all odd index lower case
+  // 0 based, meaning 0 index = uppercase, and should start over for each word
+  
+  // so i'm thinking of spreading the string with split' ' to seperate
+  // the string into an array of word strings
+  // then using map to indicate toUpperCase each even index starting with 0
+  // and toLowerCase() all odd index
+  // then join the array back into a string of words seperated by a space
+  
+  let strArr = string.split(' ');
+
+  return strArr.map((words) => {
+    return words.split('').map((letter, index) => {
+      if (index % 2 === 0) {
+        return letter.toUpperCase();
+      } else {
+        return letter.toLowerCase();
+      }
+    }).join('')
+  }).join(' ')
+}
+
+```
