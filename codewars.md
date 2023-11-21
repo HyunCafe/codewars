@@ -386,4 +386,15 @@ String.prototype.camelCase = function () {
     }
   }).join('');
 };
+
+// Solution 2
+String.prototype.camelCase=function(){
+ // so i am thinking of seperating the string into an array w/ individual elements
+  // then using map to target the first index of the grouped elem, and slice to combine
+  // then join it back into a string and return it
+  
+  return this.split(' ').map((words) => {
+    return words.charAt(0).toUpperCase() + words.slice(1);
+  }).join('')
+}
 ```
