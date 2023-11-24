@@ -427,3 +427,49 @@ function toWeirdCase(string){
 }
 
 ```
+
+#### 6 Kyu Kata | 11.24.23
+[link](https://www.codewars.com/kata/5202ef17a402dd033c000009/train/javascript)
+```javascript
+function titleCase(title, minorWords) {
+  if (!title) return '';
+
+  let words = title.toLowerCase().split(' ');
+
+  let minorWordsArray = minorWords ? minorWords.toLowerCase().split(' ') : '';
+
+  return words.map((word, index) => {
+    if (index === 0 || !minorWordsArray.includes(word)) {
+      return word[0].toUpperCase() + word.slice(1);
+    }
+    return word;
+  }).join(' ');
+}
+```
+
+#### 6 Kyu Kata | 11.24.23
+[link](https://www.codewars.com/kata/51e0007c1f9378fa810002a9/train/javascript)
+```javascript
+// Return the output array, and ignore all non-op characters
+function parse(data) {
+  let arr = [];
+
+  data.split('').reduce((acc, curr) => {
+    switch (curr) {
+      case 'i':
+        return acc + 1;
+      case 'd':
+        return acc - 1;
+      case 's':
+        return acc * acc;
+      case 'o':
+        arr.push(acc);
+        return acc;
+      default:
+        return acc;
+    }
+  }, 0);
+
+  return arr;
+}
+```
