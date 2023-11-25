@@ -473,3 +473,31 @@ function parse(data) {
   return arr;
 }
 ```
+
+### 6 Kyu Kata | 11.25.23 
+[link](https://www.codewars.com/kata/5ce399e0047a45001c853c2b/train/javascript)
+```javascript
+function partsSums(ls) {
+  // input will be an array of numbers
+  // we will gather the sum of the array
+  // then we will remove the first index and fine the sum again
+  // keep repeating this until the array is empty
+  // then return a new array with the sum of the values as elements
+  // in descending order
+  
+  // i will use reduce to find the sum, then push it into a new array
+  // then will pop the first element out and do reduce again
+  // keep repeating the process till the array is empty then return the new array
+  
+  const arr = [];
+  let spreadArr = [...ls]
+  
+  while (spreadArr.length > 0) {
+    let sum = spreadArr.reduce((acc, num) => acc + num);
+    arr.push(sum);
+    spreadArr.shift();
+  }
+ arr.push(0)
+  return arr;
+}
+```
