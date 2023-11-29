@@ -500,4 +500,19 @@ function partsSums(ls) {
  arr.push(0)
   return arr;
 }
+
+// Solution 2:
+function partsSums(ls) {
+  let newArr = [];
+  let totalSum = ls.reduce((acc, curr) => acc + curr, 0);  // Calculate total sum once
+
+  // Push the total sum and then reduce it in each iteration
+  newArr.push(totalSum);
+  for (let i = 0; i < ls.length; i++) {
+    totalSum -= ls[i];  // Subtract the current element
+    newArr.push(totalSum);  // Push the new sum after subtraction
+  }
+
+  return newArr;
+}
 ```
