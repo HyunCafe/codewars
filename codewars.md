@@ -546,3 +546,20 @@ function stockList(listOfArt, listOfCat) {
 }
 
 ```
+
+#### 6 Kyu Kata | 12.01.23
+[link](https://www.codewars.com/kata/59df2f8f08c6cec835000012/train/javascript)
+```javascript
+function meeting(s) {
+    // input will be a string of first:lastname seperated by ;
+  // output = sorted (firstname, lastname) capitalized no space
+  
+  let splitFullNames = s.split(';')
+  let reformatedNames = splitFullNames.map((names) => {
+    let [firstName, lastName] = names.split(':')
+    return `(${lastName.toUpperCase()}, ${firstName.toUpperCase()})`
+  })
+  
+  return reformatedNames.sort().join('');
+}
+```
