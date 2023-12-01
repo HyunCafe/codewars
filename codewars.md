@@ -516,3 +516,33 @@ function partsSums(ls) {
   return newArr;
 }
 ```
+
+#### 6 Kyu Kata | 12.01.23
+[Link](https://www.codewars.com/kata/54dc6f5a224c26032800005c/train/javascript)
+```javascript
+function stockList(listOfArt, listOfCat) {
+  if (listOfArt.length === 0 || listOfCat.length === 0) return '';
+
+  const hashObject = {};
+
+  listOfArt.forEach((book) => {
+    let [code, quantity] = book.split(' ');
+    let category = code[0];
+    quantity = +quantity;
+    
+    if (hashObject[category]) {
+      hashObject[category] += quantity;
+    } else {
+      hashObject[category] = quantity;
+    }
+  });
+
+  let results = listOfCat.map(cat => {
+    let quantity = hashObject[cat] || 0;
+    return `(${cat} : ${quantity})`;
+  });
+
+  return results.join(' - ');
+}
+
+```
