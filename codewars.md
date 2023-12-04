@@ -563,3 +563,28 @@ function meeting(s) {
   return reformatedNames.sort().join('');
 }
 ```
+
+#### 6 Kyu Kata | 12.03.23
+[link](https://www.codewars.com/kata/56a5d994ac971f1ac500003e/train/javascript)
+```javascript
+function longestConsec(strarr, k) {
+    // input: an array of strings and numbers
+  // output: concat of the word elements based on k number that is the longest char length
+  
+  // map through strarr and concat elements k times using slice to indicate index start and index + k end 
+  // then join back into one string
+  
+  // use reduce on that to return the longest string
+  
+  
+  if (!strarr.length || k > strarr.length || k <= 0 ) return '';
+  
+  let concatStr = strarr.map((_, index) => {
+    return strarr.slice(index, index + k).join('')
+  });
+  
+  return concatStr.reduce((acc, curr) => {
+    return curr.length > acc.length ? curr : acc;
+  })
+ }
+```
