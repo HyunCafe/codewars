@@ -587,4 +587,22 @@ function longestConsec(strarr, k) {
     return curr.length > acc.length ? curr : acc;
   })
  }
+
+// solution 2 next day
+function longestConsec(strarr, k) {
+  // input: array of strings and number
+  // output: strings concat k number of times with the longest combination of .length after
+
+  if (!strarr.length || k > strarr.length || k <= 0) return '';
+  
+  let combinedStr = strarr.map((_, index) => {
+    return strarr.slice(index, index + k).join('')
+  });
+  
+    let longestStr = combinedStr.reduce((acc, curr) => {
+      return curr.length > acc.length ? curr : acc;
+    });
+  
+  return longestStr;
+}
 ```
