@@ -562,6 +562,21 @@ function meeting(s) {
   
   return reformatedNames.sort().join('');
 }
+
+// Solution 2 redid another day
+function meeting(s) {
+    // input: will be a string of first:last names seperated by ;
+  // output: (FIRST, LAST)
+  
+  const names = s.split(';');
+  
+  const splitNames = names.map((name) => {
+     const [firstName, lastName] = name.split(':')
+     return `(${lastName.toUpperCase()}, ${firstName.toUpperCase()})`
+  })
+  
+  return splitNames.sort().join('')
+}
 ```
 
 #### 6 Kyu Kata | 12.03.23
