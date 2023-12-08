@@ -552,7 +552,7 @@ function stockList(listOfArt, listOfCat) {
 ```javascript
 function meeting(s) {
     // input will be a string of first:lastname seperated by ;
-  // output = sorted (firstname, lastname) capitalized no space
+  // output = sorted (lastname, firstname) capitalized no space
   
   let splitFullNames = s.split(';')
   let reformatedNames = splitFullNames.map((names) => {
@@ -566,7 +566,7 @@ function meeting(s) {
 // Solution 2 redid another day
 function meeting(s) {
     // input: will be a string of first:last names seperated by ;
-  // output: (FIRST, LAST)
+  // output: (LAST, FIRST)
   
   const names = s.split(';');
   
