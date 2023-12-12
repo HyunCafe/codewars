@@ -626,7 +626,7 @@ function longestConsec(strarr, k) {
 [link](https://www.codewars.com/kata/56b5afb4ed1f6d5fb0000991/train/javascript)
 ```javascript
 function revrot(str, sz) {
-    // input = string of digits
+   // input = string of digits
   // operation to do = cut string into chunks
   // chunks = substring of the string of size (sz) 
   // ignore last chunk if chunk < sz
@@ -644,17 +644,16 @@ function revrot(str, sz) {
     }
   }
     
-  return chunks.map(chunk => {
-    const sum = [...chunk].reduce((acc, curr) => (acc + curr) ** 3);
-    const isSumOfCubes = if (sum / 2 === chunk) {
-      return chunk.reverse((a, b) => b - a)
-      } else {
-        return chunks[chunk] // logic not solved yet just saving data for later date to continue
-      }
-  })
+   return chunks.map(chunk => {
+        // Calculate the sum of the cubes of the digits in the chunk
+        const sumOfCubes = [...chunk].reduce((acc, curr) => acc + Math.pow(parseInt(curr), 3), 0);
 
-
-}
-
-
+        // Reverse the chunk if sum of cubes is divisible by 2, otherwise rotate
+        if (sumOfCubes % 2 === 0) {
+            return chunk.split('').reverse().join('');
+        } else {
+            return chunk.slice(1) + chunk[0];
+        }
+    }).join('');
+  }
 ```
