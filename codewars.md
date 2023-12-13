@@ -656,4 +656,32 @@ function revrot(str, sz) {
         }
     }).join('');
   }
+
+// solution 2: retried on another day
+function revrot(str, sz) {
+    // input: string of digits and size
+  // output: chunks of digits by size sz
+  // if chunk === sum of the cube of its digits divisble by 2 reverse it
+  // otherwise rotate all chunks to the left once in position
+  
+  if (sz <= 0 || !str || sz > str.length) return '';
+  
+  const chunks = [];
+  
+ for (let i = 0; i <= str.length; i += sz) {
+   if (i + sz <= str.length) {
+   chunks.push(str.slice(i, i + sz))
+     }
+ }
+  
+  return chunks.map((chunk) => {
+    const reverseChunk = chunk.split('').reduce((acc, curr) => acc + Math.pow(curr), 3)
+    if (reverseChunk % 2 === 0) {
+      return chunk.split('').reverse().join('');
+    } else {
+      return chunk.slice(1) + chunk[0]
+    }
+  }).join('');
+}
+
 ```
